@@ -13,7 +13,7 @@
           %li= link_to "Profile", edit_profile_path
 
     %header
-      = link_to image_tag('logo.png', width: '200', height: '114'), root_path, title: 'TIL MagmaLabs', class: 'ml'
+      = link_to image_tag('logo.png', width: '300', height: '150'), root_path, title: 'TIL MagmaLabs', class: 'ml'
       = link_to root_url do
         %h1 TODAY I LEARNED
       = render 'shared/google_analytics' unless logged_in?
@@ -25,26 +25,12 @@
     %nav.site_nav
       %ul
         %li.site_nav__magma
-          = link_to image_tag('logo-favicon.png'), 'https://www.magmalabs.io', title: 'MagmaLabs site', class: 'site_nav__magma'
+          = link_to image_tag('logo-favicon.png'), 'https://rarolabs.com.br/', title: 'RaroLabs site', class: 'site_nav__magma'
         %li.site_nav__login
           - if current_developer
             = link_to 'Log out', signout_path, method: :delete, class: 'site_nav__link'
           - else
             = link_to 'Log in', new_post_path, class: 'site_nav__link'
-
-        %li.site_nav__about
-          = link_to "?", "#", class: "site_nav__link"
-          .site_nav__toggle
-            .copy
-              :markdown
-                TIL is an open-source project by
-                [MagmaLabs](https://magmalabs.io) that exists to catalogue
-                the sharing & accumulation of knowledge as it happens
-                day-to-day. Posts have a 200-word limit, and posting is open to
-                any MagmaLaber as well as selected friends of MagmaLabs. We
-                hope you enjoy learning along with us.
-              %ul.social
-                %li= link_to "/wearemagmalabs", "https://twitter.com/wearemagmalabs", class: "social_twitter", target: '_blank'
 
         %li.site_nav__statistics
           = link_to "statistics", statistics_path, class: "site_nav__link"
@@ -56,5 +42,5 @@
               = search_field_tag :q, '', aria: { label: 'search' }
               = button_tag 'Search', name: nil
 
-        %li.site_nav__twitter
-          = link_to "Twitter", "https://twitter.com/wearemagmalabs", class: "site_nav__link", target: '_blank'
+        -# %li.site_nav__twitter
+        -#   = link_to "Twitter", "https://twitter.com/wearemagmalabs", class: "site_nav__link", target: '_blank'

@@ -17,15 +17,15 @@ class SchemaBlogpostSerializer < SchemaBaseSerializer
         '@context': 'http://schema.org',
         '@type': 'BlogPosting',
         'headline': entry.title,
-        'alternativeHeadline': 'MagmaLabs Today I Learned',
+        'alternativeHeadline': 'RaroLabs Today I Learned',
         'datePublished': entry.created_at.strftime('%Y-%m-%d'),
         'dateModified': entry.updated_at.strftime('%Y-%m-%d'),
         'articleBody': entry.body,
         'image': context.image_url('logo'),
         'inLanguage': 'en-US',
         'copyrightYear': entry.created_at.year,
-        'keywords': [entry.channel_name, 'MagmaLabs TIL', 'BlogPost', 'Today I Learned'],
-        'publisher': 'MagmaLabs'
+        'keywords': [entry.channel_name, 'RaroLabs TIL', 'BlogPost', 'Today I Learned'],
+        'publisher': 'RaroLabs'
     }
   end
 
@@ -51,11 +51,11 @@ class SchemaBlogpostSerializer < SchemaBaseSerializer
     {
         'publisher': {
             '@type': 'Organization',
-            'name': 'MagmaLabs',
-            'url': 'https://www.magmalabs.io',
+            'name': 'RaroLabs',
+            'url': 'https://www.rarolabs.com.br',
             'logo': {
                 '@type': 'ImageObject',
-                'url': context.image_url('magma-logo')
+                'url': context.image_url('raro-logo')
             }
         }
     }

@@ -8,14 +8,14 @@ if Developer.count.zero?
   5.times do
     username = Faker::Movies::VForVendetta.unique.character.downcase.delete(' ')
     Developer.create!(username: username,
-                      email: "#{username}@magmalabs.io")
+                      email: "#{username}@rarolabs.com.br")
   end
   puts ' ...done.'
 end
 
 if Post.count.zero?
   print 'Creating posts'
-  400.times do
+  50.times do
     channel = Channel.all.sample
     likes = rand(1..20)
     length = rand(10..50)

@@ -32,7 +32,7 @@ module SocialMessaging
     end
 
     def host
-      ENV.fetch('HOST', 'til.magmalabs.io')
+      ENV.fetch('HOST', 'til.rarolabs.com.br')
     end
 
     def status
