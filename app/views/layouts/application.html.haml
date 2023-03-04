@@ -13,7 +13,7 @@
           %li= link_to "Profile", edit_profile_path
 
     %header
-      = link_to image_tag('logo.png', width: '300', height: '150'), url: "rarolabs.com.br", target: "_blank", title: 'TIL Rarolabs.com.br', class: 'ml'
+      = link_to image_tag('logo.png', width: '300', height: '150'), "http://rarolabs.com.br", target: "_blank", title: 'TIL Rarolabs.com.br', class: 'ml'
       = link_to root_url do
         %h1 TODAY I LEARNED
       = render 'shared/google_analytics' unless logged_in?
