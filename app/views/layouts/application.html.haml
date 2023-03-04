@@ -13,7 +13,7 @@
           %li= link_to "Profile", edit_profile_path
 
     %header
-      = link_to image_tag('logo.png', width: '300', height: '150'), root_path, title: 'TIL MagmaLabs', class: 'ml'
+      = link_to image_tag('logo.png', width: '300', height: '150'), url: "rarolabs.com.br", target: "_blank", title: 'TIL Rarolabs.com.br', class: 'ml'
       = link_to root_url do
         %h1 TODAY I LEARNED
       = render 'shared/google_analytics' unless logged_in?
@@ -24,8 +24,6 @@
 
     %nav.site_nav
       %ul
-        %li.site_nav__magma
-          = link_to image_tag('logo-favicon.png'), 'https://rarolabs.com.br/', title: 'RaroLabs site', class: 'site_nav__magma'
         %li.site_nav__login
           - if current_developer
             = link_to 'Log out', signout_path, method: :delete, class: 'site_nav__link'
