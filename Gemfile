@@ -38,9 +38,10 @@ group :development do
   gem 'spring'
 end
 
+gem 'faker'
+
 group :development, :test do
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'figaro'
   gem 'pry-byebug'
   gem 'pry-rails'
